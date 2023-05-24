@@ -10,15 +10,11 @@ namespace PPAI_2023.Entidades
     {
         private string nombre;
 
-        public Estado(string nombreEstado)
-        {
-            this.nombre = nombreEstado;
-        }
+        public string Nombre { get => nombre; set => nombre = value; }
 
-        public DateTime NombreEstado
+        public Estado(string nombre)
         {
-            get { return nombreEstado; }
-            set { nombreEstado = value; }
+            this.Nombre = nombre;       
         }
 
         public string getNombreEstado()
