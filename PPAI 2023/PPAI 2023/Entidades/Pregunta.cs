@@ -17,8 +17,8 @@ namespace PPAI_2023.Entidades
         // Propiedades get y set
         public string DescripcionPregunta
         {
-            get { return descripcionPregunta; }
-            set { descripcionPregunta = value; }
+            get { return pregunta; }
+            set { pregunta = value; }
         }
     }
 }

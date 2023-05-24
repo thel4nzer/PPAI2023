@@ -3,8 +3,9 @@
     "",
     "\\PPAI 2023",
     "\\PPAI 2023\\PPAI 2023",
-    "\\PPAI 2023\\PPAI 2023\\Boundary"
+    "\\PPAI 2023\\PPAI 2023\\Boundary",
+    "\\PPAI 2023\\PPAI 2023\\Entidades"
   ],
-  "SelectedNode": "\\PPAI 2023\\PPAI 2023.sln",
+  "SelectedNode": "\\PPAI 2023\\PPAI 2023\\Entidades\\Estado.cs",
   "PreviewInSolutionExplorer": false
 }
