@@ -39,5 +39,7 @@ namespace PPAI_2023.Entidades
             set { nroCelular = value; } 
         }
 
+        public void(Obtener)
+
     }
 }

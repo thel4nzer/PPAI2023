@@ -69,7 +69,7 @@ namespace PPAI_2023
                 fila.Cells.Add(celdaAtributo2);
 
                 DataGridViewCell celdaAtributo3 = new DataGridViewTextBoxCell();
-                celdaAtributo3.Value = llamada.Duracion.ToString();
+                celdaAtributo3.Value = llamada.Observacion.ToString();
                 fila.Cells.Add(celdaAtributo3);
 
 
@@ -82,6 +82,16 @@ namespace PPAI_2023
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             gestor.tomarDatosPeriodoLlamada(tomarFechaInicio(), tomarFechaFin());
+        }
+
+        private void tomarLlamadaSeleccionada(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaSeleccionada= grdLlamadas.SelectedRows[0];
+            Llamada llam = new Llamada();
+            llam.Observacion = filaSeleccionada.Cells["Observacion"].Value.ToString();
+            llam.Duracion = filaSeleccionada.Cells["Duracion"].Value.ToString();
+            llam.DescOperador = filaSeleccionada.Cells["Descripcion"].Value.ToString();
+            gestor.tomarLlamada();
         }
     }
 }

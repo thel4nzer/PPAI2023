@@ -18,7 +18,6 @@ namespace PPAI_2023.Entidades
         private Cliente cliente;
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
         private string duracion;
-<<<<<<< HEAD
 
 
 
@@ -32,8 +31,11 @@ namespace PPAI_2023.Entidades
             this.observacionAuditor = observacion;
             this.cliente = cliente;
         }
-=======
->>>>>>> 2ce18397a2465d36b85538c6ebeff73831717c53
+
+        public Llamada()
+        {
+
+        }
         
         public string DescOperador { get => descripcionOperador; set => descripcionOperador = value; }
         public string Duracion { get => duracion; set => duracion = value; }

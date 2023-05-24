@@ -244,6 +244,7 @@
             this.grdLlamadas.RowTemplate.Height = 24;
             this.grdLlamadas.Size = new System.Drawing.Size(442, 360);
             this.grdLlamadas.TabIndex = 38;
+            this.grdLlamadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tomarLlamadaSeleccionada);
             // 
             // Descripcion
             // 
