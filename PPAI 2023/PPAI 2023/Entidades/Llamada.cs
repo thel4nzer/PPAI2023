@@ -17,7 +17,6 @@ namespace PPAI_2023.Entidades
         private List<CambioEstado> cambioEstado = new List<CambioEstado>();
         private Cliente cliente;
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
-        private s
 
 
 
@@ -26,7 +25,7 @@ namespace PPAI_2023.Entidades
         {
             this.descripcionOperador = descOperador;
             this.detalleAccionRequerida = detalle;
-            this.duracion = duracion
+            this.duracion = duracion;
             this.encuestaEnviada = encuestaEnv;
             this.observacionAuditor = observacion;
             this.cliente = cliente;
@@ -46,14 +45,14 @@ namespace PPAI_2023.Entidades
 
         public string Detalle
         {
-            get => detalle;
-            set => detalle = value;
+            get => detalleAccionRequerida;
+            set => detalleAccionRequerida = value;
         }
 
         public bool EncuestaEnv
         {
-            get => encuestaEnv;
-            set => encuestaEnv = value;
+            get => encuestaEnviada;
+            set => encuestaEnviada = value;
         }
 
         public string Observacion

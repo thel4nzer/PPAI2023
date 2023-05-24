@@ -63,8 +63,19 @@ namespace PPAI_2023
                 DataGridViewCell celdaAtributo1 = new DataGridViewTextBoxCell();
                 celdaAtributo1.Value = llamada.DescOperador.ToString();
                 fila.Cells.Add(celdaAtributo1);
-                grdLlamadas.Rows.Add(fila);
+                
+                DataGridViewCell celdaAtributo2 = new DataGridViewTextBoxCell();
+                celdaAtributo2.Value = llamada.Duracion.ToString();
+                fila.Cells.Add(celdaAtributo2);
 
+                DataGridViewCell celdaAtributo3 = new DataGridViewTextBoxCell();
+                celdaAtributo3.Value = llamada.Duracion.ToString();
+                fila.Cells.Add(celdaAtributo3);
+
+
+
+
+                grdLlamadas.Rows.Add(fila);
             }
         }
 
