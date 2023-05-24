@@ -18,6 +18,7 @@ namespace PPAI_2023.Entidades
         private Cliente cliente;
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
         private string duracion;
+<<<<<<< HEAD
 
 
 
@@ -31,35 +32,31 @@ namespace PPAI_2023.Entidades
             this.observacionAuditor = observacion;
             this.cliente = cliente;
         }
+=======
+>>>>>>> 2ce18397a2465d36b85538c6ebeff73831717c53
         
-        public string DescOperador
-        {
-            get { return descripcionOperador; }
-            set { descripcionOperador = value; }
-        }
+        public string DescOperador { get => descripcionOperador; set => descripcionOperador = value; }
+        public string Duracion { get => duracion; set => duracion = value; }
+        public string Detalle { get => detalleAccionRequerida;set => detalleAccionRequerida = value; }
+        
+        public bool EncuestaEnv { get => encuestaEnviada; set => encuestaEnviada = value; }
 
-        public string Duracion
-        {
-            get { return duracion; }
-            set => duracion = value;
-        }
+        public string Observacion { get => observacionAuditor; set => observacionAuditor = value; } 
 
-        public string Detalle
-        {
-            get => detalleAccionRequerida;
-            set => detalleAccionRequerida = value;
-        }
+        public Cliente Cliente { get => cliente; set => cliente = value; }
+        public List<RespuestaCliente> RespuestaCliente { get => respuestaCliente; set => respuestaCliente = value; }
+        public List<CambioEstado> CambioEstado { get => cambioEstado; set => cambioEstado = value; }
 
-        public bool EncuestaEnv
+        public Llamada(string descripcionOperador, string detalleAccionRequerida, bool encuestaEnviada, string observacionAuditor, List<CambioEstado> cambioEstado, Cliente cliente, List<RespuestaCliente> respuestaCliente, string duracion, string descOperador)
         {
-            get => encuestaEnviada;
-            set => encuestaEnviada = value;
-        }
-
-        public string Observacion
-        {
-            get => observacionAuditor;
-            set => observacionAuditor = value;
+            this.descripcionOperador = descripcionOperador;
+            this.detalleAccionRequerida = detalleAccionRequerida;
+            this.encuestaEnviada = encuestaEnviada;
+            this.observacionAuditor = observacionAuditor;
+            this.respuestaCliente = respuestaCliente;
+            this.duracion = duracion;
+            this.cambioEstado = cambioEstado;
+            this.cliente = cliente;
         }
 
         public bool esDePeriodo(DateTime fechaInicio, DateTime fechaFin)
