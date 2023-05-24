@@ -17,12 +17,12 @@ namespace PPAI_2023.Entidades
         private List<CambioEstado> cambioEstado = new List<CambioEstado>();
         private Cliente cliente;
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
-        private s
+        private string duracion;
 
 
 
 
-        public Llamada(string descOperador, string detalle, int duracion,bool encuestaEnv, string observacion, Cliente cliente)
+        public Llamada(string descOperador, string detalle, string duracion, bool encuestaEnv, string observacion, Cliente cliente)
         {
             this.descripcionOperador = descOperador;
             this.detalleAccionRequerida = detalle;
@@ -38,7 +38,7 @@ namespace PPAI_2023.Entidades
             set { descripcionOperador = value; }
         }
 
-        public int Duracion
+        public string Duracion
         {
             get { return duracion; }
             set => duracion = value;
@@ -46,20 +46,20 @@ namespace PPAI_2023.Entidades
 
         public string Detalle
         {
-            get => detalle;
-            set => detalle = value;
+            get => detalleAccionRequerida;
+            set => detalleAccionRequerida = value;
         }
 
         public bool EncuestaEnv
         {
-            get => encuestaEnv;
-            set => encuestaEnv = value;
+            get => encuestaEnviada;
+            set => encuestaEnviada = value;
         }
 
         public string Observacion
         {
-            get => observacion;
-            set => observacion = value;
+            get => observacionAuditor;
+            set => observacionAuditor = value;
         }
 
         public bool esDePeriodo(DateTime fechaInicio, DateTime fechaFin)
