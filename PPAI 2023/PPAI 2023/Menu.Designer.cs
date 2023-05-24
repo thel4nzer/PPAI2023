@@ -83,6 +83,7 @@
             this.btnEncuestas.TabIndex = 4;
             this.btnEncuestas.Text = "Encuestas";
             this.btnEncuestas.UseVisualStyleBackColor = true;
+            this.btnEncuestas.Click += new System.EventHandler(this.btnEncuestas_Click);
             // 
             // Menu
             // 

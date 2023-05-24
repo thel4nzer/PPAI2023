@@ -16,5 +16,12 @@ namespace PPAI_2023
         {
             InitializeComponent();
         }
+
+        private void btnEncuestas_Click(object sender, EventArgs e)
+        {
+            Encuestas ventana = new Encuestas();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }

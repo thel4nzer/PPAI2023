@@ -26,5 +26,12 @@ namespace PPAI_2023
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Menu ventana = new Menu();
+            ventana.Show();
+            this.Hide();
+        }
     }
 }

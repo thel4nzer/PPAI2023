@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,21 +12,33 @@ namespace PPAI_2023.Entidades
     {
         private string descripcionOperador;
         private string detalleAccionRequerida;
-        private int duracion;
         private bool encuestaEnviada;
         private string observacionAuditor;
+        private List<CambioEstado> cambioEstado = new List<CambioEstado>();
+        private Cliente cliente;
+        private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
 
 
 
-        public Llamada(string descOperador, string detalle, int duracionLlamada, bool encuestaEnv, string observacion)
+        public Llamada(string descOperador, string detalle, string duracion,bool encuestaEnv, string observacion, Cliente cliente)
         {
-            this.descripcionOperador = descOpe
+            this.descripcionOperador = descOperador;
+            this.detalleAccionRequerida = detalle;
+            this.encuestaEnviada = encuestaEnv;
+            this.observacionAuditor = observacion;
+            this.cliente = cliente;
         }
         
-            public string descOperador
+        public string descOperador
         {
-            get => descOperador;
-            set => descOperador = value;
+            get { return descOperador; }
+            set { descOperador = value; }
+        }
+
+        public string duracion
+        {
+            get { return duracion; }
+            set => duracion = value;
         }
 
         public string detalle
@@ -33,17 +47,56 @@ namespace PPAI_2023.Entidades
             set => detalle = value;
         }
 
-        public int duracionLlamada
-        {
-            get => duracionLlamada;
-            set => duracionLlamada = value;
-        }
-
         public bool encuestaEnv
         {
             get => encuestaEnv;
             set => encuestaEnv = value;
         }
+
+        public string observacion
+        {
+            get => observacion;
+            set => observacion = value;
+        }
+
+        public bool esDePeriodo(DateTime fechaInicio, DateTime fechaFin)
+        {
+            for (int i = 0; i < cambioEstado.Count(); i++)
+            {
+                if (cambioEstado[i].esEstadoInicial())
+                {
+                    if ((cambioEstado[i].getFechaHoraInicio() >= fechaInicio) && (cambioEstado[i].getFechaHoraInicio() <= fechaFin))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool tieneRespuesta()
+        {
+            for (int i = 0; i < respuestaCliente.Count(); i++)
+            {
+                if (respuestaCliente[i].getRespuesta() != "")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Otros metodos para datos (despues los vemos)
+
+        public void agregarCambioDeEstado(CambioEstado ce)
+        {
+            cambioEstado.Add(ce);
+        }
+        public void agregarRespuestaCliente(RespuestaCliente re)
+        {
+            respuestaCliente.Add(re);
+        }
+
     } 
             
 }

@@ -9,40 +9,32 @@ namespace PPAI_2023.Entidades
     public class Cliente
     {
         //Atributos
-        private string nombre;
+        private string nombreCompleto;
 
-        private string apellido;
+        private int dni;
 
-        private long dni;
-
-        private long nroCelular;
+        private int nroCelular;
 
         //Constructor
-        public Cliente(string nombre, string apellido, long dni, long nroCelular)
+        public Cliente(int dni, string nombreCompleto, int nroCelular)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;  
+            this.nombreCompleto = nombreCompleto;
             this.dni = dni; 
             this.nroCelular = nroCelular;   
         }
 
         //Propiedades get y set
         public string Nombre { 
-            get { return nombre; } 
-            set { nombre = value; } 
+            get { return nombreCompleto; } 
+            set { nombreCompleto = value; } 
         }
 
-        public string Apellido { 
-            get { return apellido; } 
-            set { apellido = value; } 
-        }
-
-        public long Dni { 
+        public int Dni { 
             get { return dni; } 
             set { dni = value; } 
         }
 
-        public long NroCelular { 
+        public int NroCelular { 
             get { return nroCelular; } 
             set { nroCelular = value; } 
         }

@@ -46,18 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultarEncuesta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultarEncuesta.Designer.cs">
-      <DependentUpon>ConsultarEncuesta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DatosLlamada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DatosLlamada.Designer.cs">
-      <DependentUpon>DatosLlamada.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Control\ControladorConsultarEncuesta.cs" />
     <Compile Include="Encuestas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,10 +55,13 @@
     </Compile>
     <Compile Include="Entidades\CambioEstado.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Encuesta.cs" />
+    <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Llamada.cs" />
-    <Compile Include="Entidades\RespuestaDeCliente.cs" />
+    <Compile Include="Entidades\Pregunta.cs" />
+    <Compile Include="Entidades\RespuestaCliente.cs" />
     <Compile Include="Entidades\RespuestaPosible.cs" />
-    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="GeneradorDeDatos.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,14 +74,14 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boundary\PantallaConsultarEncuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boundary\PantallaConsultarEncuesta.Designer.cs">
+      <DependentUpon>PantallaConsultarEncuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConsultarEncuesta.resx">
-      <DependentUpon>ConsultarEncuesta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DatosLlamada.resx">
-      <DependentUpon>DatosLlamada.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Encuestas.resx">
       <DependentUpon>Encuestas.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boundary\PantallaConsultarEncuesta.resx">
+      <DependentUpon>PantallaConsultarEncuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

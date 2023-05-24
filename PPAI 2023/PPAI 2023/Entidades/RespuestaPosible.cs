@@ -10,13 +10,13 @@ namespace PPAI_2023.Entidades
     {
         //Atributos
         private int valor;
-        private string descripcionRespuestaP;
+        private string descripcion;
 
         //Constructor
         public RespuestaPosible(int valor, string descripcionRespuestaP)
         {
             this.valor = valor;
-            this.descripcionRespuestaP = descripcionRespuestaP;
+            this.descripcion = descripcionRespuestaP;
         }
 
         //Propiedades get y set
@@ -28,8 +28,15 @@ namespace PPAI_2023.Entidades
 
         public string DescripcionRespuestaP
         {
-            get { return descripcionRespuestaP; }
-            set { descripcionRespuestaP = value; }
+            get { return descripcion; }
+            set { descripcion = value; }
         }
+
+        public string getRespuesta()
+        {
+            return descripcion;
+        }
+
     }
+   
 }
