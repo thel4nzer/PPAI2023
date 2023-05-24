@@ -15,7 +15,12 @@ namespace PPAI_2023.Entidades
             this.nombre = nombreEstado;
         }
 
-        
+        public DateTime NombreEstado
+        {
+            get { return nombreEstado; }
+            set { nombreEstado = value; }
+        }
+
         public string getNombreEstado()
         {
             return nombre;

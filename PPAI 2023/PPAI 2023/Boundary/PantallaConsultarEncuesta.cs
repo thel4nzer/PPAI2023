@@ -59,8 +59,12 @@ namespace PPAI_2023
             grdLlamadas.Enabled = true;
             foreach(var llamada in datosLlamada)
             {
-                int rowIndex = grdLlamadas.Rows.Add();
-                grdLlamadas.Rows[rowIndex].Cells["Descripcion"].Value = llamada.descOperador;
+                DataGridViewRow fila = new DataGridViewRow();
+                DataGridViewCell celdaAtributo1 = new DataGridViewTextBoxCell();
+                celdaAtributo1.Value = llamada.DescOperador.ToString();
+                fila.Cells.Add(celdaAtributo1);
+                grdLlamadas.Rows.Add(fila);
+
             }
         }
 

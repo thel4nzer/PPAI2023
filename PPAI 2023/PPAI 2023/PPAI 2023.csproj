@@ -61,7 +61,7 @@
     <Compile Include="Entidades\Pregunta.cs" />
     <Compile Include="Entidades\RespuestaCliente.cs" />
     <Compile Include="Entidades\RespuestaPosible.cs" />
-    <Compile Include="GeneradorDeDatos.cs" />
+    <Compile Include="Datos\GeneradorDeDatos.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
