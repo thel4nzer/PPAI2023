@@ -26,7 +26,7 @@ namespace PPAI_2023
         public PantallaConsultarEncuesta()
         {
             habilitarVentana();
-            
+
         }
 
         public void habilitarVentana()
@@ -60,7 +60,7 @@ namespace PPAI_2023
         public void solicitarSeleccionLlamada(List<Llamada> datosLlamada)
         {
             grdLlamadas.Enabled = true;
-            foreach(var llamada in datosLlamada)
+            foreach (var llamada in datosLlamada)
             {
                 grdLlamadas.AutoGenerateColumns = false;
                 grdLlamadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -69,7 +69,7 @@ namespace PPAI_2023
                 grdLlamadas.Columns.Add("DuracionColumn", "Duracion");
                 grdLlamadas.Columns.Add("ObservacionAuditorColum", "Observacion Auditor");
 
-                grdLlamadas.Columns["DescripcionOperadorColumn"].DataPropertyName= "descOperador";
+                grdLlamadas.Columns["DescripcionOperadorColumn"].DataPropertyName = "descOperador";
                 grdLlamadas.Columns["DuracionColumn"].DataPropertyName = "duracion";
                 grdLlamadas.Columns["ObservacionAuditorColum"].DataPropertyName = "observacion";
                 //DataGridViewRow fila = new DataGridViewRow();
@@ -98,11 +98,18 @@ namespace PPAI_2023
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow filaSelccionada= grdLlamadas.Rows[e.RowIndex];
+                DataGridViewRow filaSelccionada = grdLlamadas.Rows[e.RowIndex];
                 Llamada llamadaSeleccionada = filaSelccionada.DataBoundItem as Llamada;
                 gestor.tomarLlamada(llamadaSeleccionada);
             }
-                
+
+        }
+
+        public void mostrarDatosLlamada()
+        {
+            //lblnombre.Text= 
+            //lblDni.Text=
+            //lblNroCelular.Text=
         }
     }
 }

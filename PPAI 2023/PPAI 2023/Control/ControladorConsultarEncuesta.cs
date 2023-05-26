@@ -23,6 +23,7 @@ namespace PPAI_2023.Control
             this.pantalla = pantalla;
             this.generadorDatos = new GeneradorDeDatos();
             this.llamada = new Llamada();
+            this.encuesta = new Encuesta();
 
         }
 
@@ -56,11 +57,22 @@ namespace PPAI_2023.Control
         public void tomarLlamada(Llamada llamselec)
         {
             obtenerDatosLlamada(llamselec);
+            obtenerDatosEncuesta();
+            //pantalla.mostrarDatosLlamada();
         }
 
         public void obtenerDatosLlamada(Llamada llamselec)
         {
             llamada.obtenerDatosLlamada(llamselec);
+        }
+
+        public void obtenerDatosEncuesta()
+        {
+            List<Encuesta> encuestas = generadorDatos.getEncuestas();
+            foreach(Encuesta enc in encuestas)
+            {
+                encuesta.obtenerDatosEncuesta(enc);
+            }
         }
 
     }

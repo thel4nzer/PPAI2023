@@ -17,6 +17,7 @@ namespace PPAI_2023
         private List<Cliente> clientes;
         private List<RespuestaCliente> respuestaClientes;
         private List<RespuestaPosible> respuestaPosibles;
+        private List<Encuesta> encuestas;
 
         public GeneradorDeDatos()
         {
@@ -70,6 +71,11 @@ namespace PPAI_2023
 
             cambioEstado = new List<CambioEstado>() { cambioEstado1, cambioEstado2, cambioEstado3, cambioEstado4, cambioEstado5, cambioEstado6, cambioEstado7, cambioEstado8, cambioEstado9, cambioEstado10 };
 
+            //Encuestas
+            Encuesta encuesta1 = new Encuesta("Le gusto o no???", new DateTime(2022, 06, 16, 14, 00, 0));
+
+            encuestas = new List<Encuesta>() { encuesta1 };
+
             //Cambios de estado Llamada
             Llamada llamada1 = new Llamada("Se hizo el vivo", "no se","5 min",true,"Me puteo",cliente1);
             llamada1.agregarCambioDeEstado(cambioEstado1);
@@ -109,6 +115,11 @@ namespace PPAI_2023
         public List<RespuestaPosible> getRespuestaPosibles()
         {
             return respuestaPosibles;
+        }
+
+        public List<Encuesta> getEncuestas()
+        {
+            return encuestas;
         }
     }
 }

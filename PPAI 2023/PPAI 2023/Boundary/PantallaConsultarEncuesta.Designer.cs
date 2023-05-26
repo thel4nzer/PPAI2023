@@ -40,8 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblNroCelular = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblApe = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -165,24 +163,6 @@
             this.lblDni.TabIndex = 46;
             this.lblDni.Text = "label2";
             // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(752, 168);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 16);
-            this.lblApellido.TabIndex = 45;
-            this.lblApellido.Text = "label2";
-            // 
-            // lblApe
-            // 
-            this.lblApe.AutoSize = true;
-            this.lblApe.Location = new System.Drawing.Point(690, 168);
-            this.lblApe.Name = "lblApe";
-            this.lblApe.Size = new System.Drawing.Size(60, 16);
-            this.lblApe.TabIndex = 44;
-            this.lblApe.Text = "Apellido:";
-            // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
@@ -301,8 +281,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNroCelular);
             this.Controls.Add(this.lblDni);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.lblApe);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCancelar);
@@ -337,8 +315,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblNroCelular;
         private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblApe;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCancelar;
