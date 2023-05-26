@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,10 +46,13 @@ namespace PPAI_2023.Entidades
 
         }
 
-        public string obtenerDatosCliente()
+        public Dictionary<string, object> obtenerDatosCliente()
         {
-            return nombreCompleto;
-            
+            Dictionary<string, object> atributos = new Dictionary<string, object>();
+            atributos.Add("Nombre", nombreCompleto);
+            atributos.Add("Dni", dni);
+            atributos.Add("NroCelular", nroCelular);
+            return atributos;
         }
 
     }

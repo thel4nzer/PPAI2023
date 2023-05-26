@@ -33,6 +33,10 @@ namespace PPAI_2023.Entidades
             return respuestaSeleccionada.getRespuesta();
         }
 
+        public string obtenerDatosRespuesta()
+        {
+            return respuestaSeleccionada.getRespuesta();
+        }
 
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +48,6 @@ namespace PPAI_2023.Entidades
 
         public Cliente Cliente { get => cliente; set => cliente = value; }
         public List<RespuestaCliente> RespuestaCliente { get => respuestaCliente; set => respuestaCliente = value; }
-        public List<CambioEstado> CambioEstado { get => cambioEstado; set => cambioEstado = value; }
 
         public Llamada(string descripcionOperador, string detalleAccionRequerida, bool encuestaEnviada, string observacionAuditor, List<CambioEstado> cambioEstado, Cliente cliente, List<RespuestaCliente> respuestaCliente, string duracion, string descOperador)
         {
@@ -59,6 +59,7 @@ namespace PPAI_2023.Entidades
             this.duracion = duracion;
             this.cambioEstado = cambioEstado;
             this.cliente = cliente;
+            this.cliente = new Cliente();
         }
 
         public bool esDePeriodo(DateTime fechaInicio, DateTime fechaFin)
@@ -99,11 +100,27 @@ namespace PPAI_2023.Entidades
             respuestaCliente.Add(re);
         }
 
-
-        public Llamada obtenerDatosLlamada(Llamada llamselec)
+        public string getDuracion(Llamada llamselec)
         {
-            llamselec.cliente.obtenerDatosCliente();
-            return llamselec;
+            return llamselec.duracion;
+        }
+
+
+        public void obtenerDatosLlamada(Llamada llamselec)
+        {
+            Cliente cliente = llamselec.Cliente;
+            cliente.obtenerDatosCliente();
+            CambioEstado estadoActual = CambioEstado.ObtenerEstadoActual(llamselec.cambioEstado);
+
+            //CambioEstado estadoActual = llamselec.cambioEstado.OrderByDescending(c => c.FechaHoraInicio).First();
+            string estado = estadoActual.getNombreEstado();
+            string duracion = getDuracion(llamselec);
+            List<string> resp = new List<string>();
+            foreach (RespuestaCliente respuesta in llamselec.RespuestaCliente)
+            {
+                resp.Add(respuesta.obtenerDatosRespuesta());
+                // Realiza las operaciones necesarias con cada respuesta
+            }
         }
 
 

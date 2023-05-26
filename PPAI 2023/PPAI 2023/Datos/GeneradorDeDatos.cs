@@ -59,7 +59,7 @@ namespace PPAI_2023
             //Cambios de Estado de Llamada (uno por llamada)
             CambioEstado cambioEstado1 = new CambioEstado(new DateTime(2022, 06, 14, 14, 00, 0), estado1);
             CambioEstado cambioEstado2 = new CambioEstado(new DateTime(2023, 06, 14, 14, 00, 0), estado4);
-            CambioEstado cambioEstado3 = new CambioEstado(new DateTime(2022, 06, 14, 14, 00, 0), estado5);
+            CambioEstado cambioEstado3 = new CambioEstado(new DateTime(2024, 06, 14, 14, 00, 0), estado5);
             CambioEstado cambioEstado4 = new CambioEstado(new DateTime(2022, 06, 14, 14, 00, 0), estado5);
             CambioEstado cambioEstado5 = new CambioEstado(new DateTime(2022, 06, 14, 14, 00, 0), estado6);
             CambioEstado cambioEstado6 = new CambioEstado(new DateTime(2022, 06, 14, 14, 00, 0), estado6);
@@ -74,6 +74,7 @@ namespace PPAI_2023
             Llamada llamada1 = new Llamada("Se hizo el vivo", "no se","5 min",true,"Me puteo",cliente1);
             llamada1.agregarCambioDeEstado(cambioEstado1);
             llamada1.agregarCambioDeEstado(cambioEstado2);
+            llamada1.agregarCambioDeEstado(cambioEstado3);
             llamada1.agregarRespuestaCliente(resp1);
 
             llamadas = new List<Llamada>() { llamada1 };

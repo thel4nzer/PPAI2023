@@ -22,6 +22,7 @@ namespace PPAI_2023.Control
         {
             this.pantalla = pantalla;
             this.generadorDatos = new GeneradorDeDatos();
+            this.llamada = new Llamada();
 
         }
 

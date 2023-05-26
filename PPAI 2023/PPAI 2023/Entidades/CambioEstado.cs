@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,28 +41,22 @@ namespace PPAI_2023.Entidades
             return false;
         }
 
-        public string obtenerEstadoActual()
-        {
-            return estado.ToString();
-        }
 
         public string getNombreEstado()
         {
             return estado.getNombreEstado();
         }
-
-        public CambioEstado obtenerEstadoActual(Llamada llamSelct)
+        public static CambioEstado ObtenerEstadoActual(List<CambioEstado> listaCambioEstado)
         {
-            CambioEstado cambioActual = null;
-            List<CambioEstado> cambiosEstado = llamSelct.CambioEstado;
-            foreach(CambioEstado cambioEstado in cambiosEstado)
-            {
-                if (cambioActual == null || cambioEstado.FechaHoraInicio>cambioActual.FechaHoraInicio)
-                {
-                    cambioActual = cambioEstado;
-                }
-            }
-            return cambioActual;
+            CambioEstado estadoActual = listaCambioEstado.OrderByDescending(c => c.getFechaHoraInicio()).First();
+            return estadoActual;
+        }
+
+        public Dictionary<string, object> obtenerDatosEstado()
+        {
+            Dictionary<string, object> atributos = new Dictionary<string, object>();
+            atributos.Add("Fecha", fechaHoraInicio);
+            return atributos;
         }
     }
 }
