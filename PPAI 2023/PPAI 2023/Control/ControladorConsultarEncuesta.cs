@@ -52,9 +52,14 @@ namespace PPAI_2023.Control
             pantalla.solicitarSeleccionLlamada(datosLlamada);
         }
 
-        public void tomarLlamada()
+        public void tomarLlamada(Llamada llamselec)
         {
+            obtenerDatosLlamada(llamselec);
+        }
 
+        public void obtenerDatosLlamada(Llamada llamselec)
+        {
+            llamada.obtenerDatosLlamada(llamselec);
         }
 
     }

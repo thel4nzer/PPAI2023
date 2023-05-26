@@ -99,6 +99,15 @@ namespace PPAI_2023.Entidades
             respuestaCliente.Add(re);
         }
 
+
+        public Llamada obtenerDatosLlamada(Llamada llamselec)
+        {
+            llamselec.cliente.obtenerDatosCliente();
+            return llamselec;
+        }
+
+
+
     } 
             
 }

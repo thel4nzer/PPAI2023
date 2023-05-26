@@ -14,6 +14,7 @@ namespace PPAI_2023.Entidades
         private int dni;
 
         private int nroCelular;
+        private GeneradorDeDatos generadorDatos;
 
         //Constructor
         public Cliente(int dni, string nombreCompleto, int nroCelular)
@@ -39,7 +40,16 @@ namespace PPAI_2023.Entidades
             set { nroCelular = value; } 
         }
 
-        public void(Obtener)
+        public Cliente()
+        {
+
+        }
+
+        public string obtenerDatosCliente()
+        {
+            return nombreCompleto;
+            
+        }
 
     }
 }

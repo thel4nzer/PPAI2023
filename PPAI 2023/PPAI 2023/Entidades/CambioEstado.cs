@@ -40,5 +40,28 @@ namespace PPAI_2023.Entidades
             return false;
         }
 
+        public string obtenerEstadoActual()
+        {
+            return estado.ToString();
+        }
+
+        public string getNombreEstado()
+        {
+            return estado.getNombreEstado();
+        }
+
+        public CambioEstado obtenerEstadoActual(Llamada llamSelct)
+        {
+            CambioEstado cambioActual = null;
+            List<CambioEstado> cambiosEstado = llamSelct.CambioEstado;
+            foreach(CambioEstado cambioEstado in cambiosEstado)
+            {
+                if (cambioActual == null || cambioEstado.FechaHoraInicio>cambioActual.FechaHoraInicio)
+                {
+                    cambioActual = cambioEstado;
+                }
+            }
+            return cambioActual;
+        }
     }
 }

@@ -6,10 +6,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PPAI_2023
 {
@@ -59,23 +62,30 @@ namespace PPAI_2023
             grdLlamadas.Enabled = true;
             foreach(var llamada in datosLlamada)
             {
-                DataGridViewRow fila = new DataGridViewRow();
-                DataGridViewCell celdaAtributo1 = new DataGridViewTextBoxCell();
-                celdaAtributo1.Value = llamada.DescOperador.ToString();
-                fila.Cells.Add(celdaAtributo1);
-                
-                DataGridViewCell celdaAtributo2 = new DataGridViewTextBoxCell();
-                celdaAtributo2.Value = llamada.Duracion.ToString();
-                fila.Cells.Add(celdaAtributo2);
+                grdLlamadas.AutoGenerateColumns = false;
+                grdLlamadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                DataGridViewCell celdaAtributo3 = new DataGridViewTextBoxCell();
-                celdaAtributo3.Value = llamada.Observacion.ToString();
-                fila.Cells.Add(celdaAtributo3);
+                grdLlamadas.Columns.Add("DescripcionOperadorColumn", "Descripcion Operador");
+                grdLlamadas.Columns.Add("DuracionColumn", "Duracion");
+                grdLlamadas.Columns.Add("ObservacionAuditorColum", "Observacion Auditor");
 
+                grdLlamadas.Columns["DescripcionOperadorColumn"].DataPropertyName= "descOperador";
+                grdLlamadas.Columns["DuracionColumn"].DataPropertyName = "duracion";
+                grdLlamadas.Columns["ObservacionAuditorColum"].DataPropertyName = "observacion";
+                //DataGridViewRow fila = new DataGridViewRow();
+                //DataGridViewCell celdaAtributo1 = new DataGridViewTextBoxCell();
+                //celdaAtributo1.Value = llamada.DescOperador.ToString();
+                //fila.Cells.Add(celdaAtributo1);
 
+                //DataGridViewCell celdaAtributo2 = new DataGridViewTextBoxCell();
+                //celdaAtributo2.Value = llamada.Duracion.ToString();
+                //fila.Cells.Add(celdaAtributo2);
 
-
-                grdLlamadas.Rows.Add(fila);
+                //DataGridViewCell celdaAtributo3 = new DataGridViewTextBoxCell();
+                //celdaAtributo3.Value = llamada.Observacion.ToString();
+                //fila.Cells.Add(celdaAtributo3);
+                //grdLlamadas.Rows.Add(fila);
+                grdLlamadas.DataSource = datosLlamada;
             }
         }
 
@@ -86,12 +96,13 @@ namespace PPAI_2023
 
         private void tomarLlamadaSeleccionada(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow filaSeleccionada= grdLlamadas.SelectedRows[0];
-            Llamada llam = new Llamada();
-            llam.Observacion = filaSeleccionada.Cells["Observacion"].Value.ToString();
-            llam.Duracion = filaSeleccionada.Cells["Duracion"].Value.ToString();
-            llam.DescOperador = filaSeleccionada.Cells["Descripcion"].Value.ToString();
-            gestor.tomarLlamada();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow filaSelccionada= grdLlamadas.Rows[e.RowIndex];
+                Llamada llamadaSeleccionada = filaSelccionada.DataBoundItem as Llamada;
+                gestor.tomarLlamada(llamadaSeleccionada);
+            }
+                
         }
     }
 }

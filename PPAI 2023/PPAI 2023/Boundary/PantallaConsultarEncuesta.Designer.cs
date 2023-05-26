@@ -48,9 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grdLlamadas = new System.Windows.Forms.DataGridView();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedFechaFin = new System.Windows.Forms.MaskedTextBox();
@@ -234,10 +231,6 @@
             // grdLlamadas
             // 
             this.grdLlamadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdLlamadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Descripcion,
-            this.Duracion,
-            this.Observacion});
             this.grdLlamadas.Location = new System.Drawing.Point(120, 215);
             this.grdLlamadas.Name = "grdLlamadas";
             this.grdLlamadas.RowHeadersWidth = 51;
@@ -245,27 +238,6 @@
             this.grdLlamadas.Size = new System.Drawing.Size(442, 360);
             this.grdLlamadas.TabIndex = 38;
             this.grdLlamadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tomarLlamadaSeleccionada);
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 125;
-            // 
-            // Duracion
-            // 
-            this.Duracion.HeaderText = "Duracion";
-            this.Duracion.MinimumWidth = 6;
-            this.Duracion.Name = "Duracion";
-            this.Duracion.Width = 125;
-            // 
-            // Observacion
-            // 
-            this.Observacion.HeaderText = "Observacion";
-            this.Observacion.MinimumWidth = 6;
-            this.Observacion.Name = "Observacion";
-            this.Observacion.Width = 125;
             // 
             // label2
             // 
@@ -377,9 +349,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox maskedFechaFin;
         private System.Windows.Forms.MaskedTextBox maskedFechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
         private System.Windows.Forms.Button btnFiltrar;
     }
 }
