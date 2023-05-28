@@ -12,10 +12,10 @@ namespace PPAI_2023.Entidades
         private string pregunta;
         private List<RespuestaPosible> respuestaPosible;
         
-        public Pregunta(string descripcionPregunta, List<RespuestaPosible> respuestaPosible)
+        public Pregunta(string descripcionPregunta)
         {
             this.pregunta = descripcionPregunta;
-            this.respuestaPosible = respuestaPosible;
+            this.respuestaPosible = new List<RespuestaPosible>();
         }
 
         // Propiedades get y set

@@ -103,7 +103,7 @@ namespace PPAI_2023.Entidades
         }
 
 
-        public void obtenerDatosLlamada(Llamada llamselec)
+        public string obtenerDatosLlamada(Llamada llamselec)
         {
             Cliente cliente = llamselec.Cliente;
             cliente.obtenerDatosCliente();
@@ -118,6 +118,7 @@ namespace PPAI_2023.Entidades
                 resp.Add(respuesta.obtenerDatosRespuesta());
                 // Realiza las operaciones necesarias con cada respuesta
             }
+            return estado.ToString();
         }
 
        

@@ -12,3 +12,17 @@ C:\Users\Usuario\Source\Repos\thel4nzer\PPAI2023\PPAI 2023\PPAI 2023\bin\Debug\P
 C:\Users\Usuario\Source\Repos\thel4nzer\PPAI2023\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.pdb
 C:\Users\Usuario\Source\Repos\thel4nzer\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.exe
 C:\Users\Usuario\Source\Repos\thel4nzer\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.pdb
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe.config
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.pdb
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.AssemblyReference.cache
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Encuestas.resources
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Login.resources
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Menu.resources
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.PantallaConsultarEncuesta.resources
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.exe
+C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.pdb

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -60,14 +61,14 @@ namespace PPAI_2023
         public void solicitarSeleccionLlamada(List<Llamada> datosLlamada)
         {
             grdLlamadas.Enabled = true;
+            grdLlamadas.Columns.Add("DescripcionOperadorColumn", "Descripcion Operador");
+            grdLlamadas.Columns.Add("DuracionColumn", "Duracion");
+            grdLlamadas.Columns.Add("ObservacionAuditorColum", "Observacion Auditor");
             foreach (var llamada in datosLlamada)
             {
                 grdLlamadas.AutoGenerateColumns = false;
                 grdLlamadas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                grdLlamadas.Columns.Add("DescripcionOperadorColumn", "Descripcion Operador");
-                grdLlamadas.Columns.Add("DuracionColumn", "Duracion");
-                grdLlamadas.Columns.Add("ObservacionAuditorColum", "Observacion Auditor");
 
                 grdLlamadas.Columns["DescripcionOperadorColumn"].DataPropertyName = "descOperador";
                 grdLlamadas.Columns["DuracionColumn"].DataPropertyName = "duracion";
@@ -105,11 +106,46 @@ namespace PPAI_2023
 
         }
 
-        public void mostrarDatosLlamada()
+        public void mostrarDatosLlamada(string estado, Llamada llamSelec, Encuesta en)
         {
-            //lblnombre.Text= 
-            //lblDni.Text=
-            //lblNroCelular.Text=
+            lblnombre.Text = llamSelec.Cliente.Nombre.ToString();
+            lblDni.Text = llamSelec.Cliente.Dni.ToString();
+            lblNroCelular.Text = llamSelec.Cliente.NroCelular.ToString();
+            lblDuracion.Text = llamSelec.Duracion.ToString();
+            lblEstado.Text  = estado.ToString();
+            lblDescripcionEncuesta.Text = en.Descripcion.ToString();
+            DataGridViewTextBoxColumn descripcionColumn = new DataGridViewTextBoxColumn();
+            descripcionColumn.DataPropertyName = "DescripcionRespuesta";
+            descripcionColumn.HeaderText = "Descripción";
+            descripcionColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+
+            grdDescripcionRespuestas.Columns.Add(descripcionColumn);
+
+            foreach (var resp in llamSelec.RespuestaCliente)
+            {
+                DataGridViewRow fila = new DataGridViewRow();
+                fila.CreateCells(grdDescripcionRespuestas);
+                fila.Cells[0].Value = resp.respuestaSeleccionada.DescripcionRespuestaP.ToString();
+                grdDescripcionRespuestas.Rows.Add(fila);
+            }
+
+            DataGridViewTextBoxColumn preguntaColumn = new DataGridViewTextBoxColumn();
+            preguntaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            preguntaColumn.DataPropertyName = "Pregunta";
+            preguntaColumn.HeaderText = "Pregunta";
+            grdRespuestasPosibles.Columns.Add(preguntaColumn);
+
+
+            foreach (var preg in en.Pregunta)
+            {
+                DataGridViewRow fila = new DataGridViewRow();
+                fila.CreateCells(grdRespuestasPosibles);
+                fila.Cells[0].Value = preg.DescripcionPregunta.ToString();
+                grdRespuestasPosibles.Rows.Add(fila);
+            }
+            btnFiltrar.Enabled = false;
+            grdLlamadas.Enabled = false;
         }
     }
 }

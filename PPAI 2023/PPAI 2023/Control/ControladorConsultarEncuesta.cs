@@ -56,23 +56,25 @@ namespace PPAI_2023.Control
 
         public void tomarLlamada(Llamada llamselec)
         {
-            obtenerDatosLlamada(llamselec);
-            obtenerDatosEncuesta();
-            //pantalla.mostrarDatosLlamada();
+            string estado=obtenerDatosLlamada(llamselec);
+            Encuesta enc = obtenerDatosEncuesta();
+            pantalla.mostrarDatosLlamada(estado, llamselec, enc);
         }
 
-        public void obtenerDatosLlamada(Llamada llamselec)
+        public string obtenerDatosLlamada(Llamada llamselec)
         {
-            llamada.obtenerDatosLlamada(llamselec);
+            return llamada.obtenerDatosLlamada(llamselec);
         }
 
-        public void obtenerDatosEncuesta()
+        public Encuesta obtenerDatosEncuesta()
         {
+            Encuesta en = new Encuesta();
             List<Encuesta> encuestas = generadorDatos.getEncuestas();
             foreach(Encuesta enc in encuestas)
             {
-                encuesta.obtenerDatosEncuesta(enc);
+                en = encuesta.obtenerDatosEncuesta(enc);
             }
+            return en;
         }
 
     }

@@ -43,5 +43,6 @@ namespace PPAI_2023.Entidades
             return respuestaSeleccionada.getRespuesta();
         }
 
+
     }
 }

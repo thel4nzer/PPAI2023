@@ -38,7 +38,7 @@ namespace PPAI_2023.Entidades
         }
         public List<Pregunta> Pregunta { get => pregunta; set => pregunta = value; }
 
-        public void obtenerDatosEncuesta(Encuesta enc)
+        public Encuesta obtenerDatosEncuesta(Encuesta enc)
         {
             List<Pregunta> pregEncuestas = new List<Pregunta>();
             RespuestaPosible resp = new RespuestaPosible();
@@ -51,6 +51,13 @@ namespace PPAI_2023.Entidades
                 }  
             }
             getDescripcionEncuesta();
+            return enc;
+        }
+
+
+        public void agregarPregunta(Pregunta pre)
+        {
+            pregunta.Add(pre);
         }
 
         public string getDescripcionEncuesta()
