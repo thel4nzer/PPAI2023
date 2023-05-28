@@ -20,9 +20,6 @@ namespace PPAI_2023.Entidades
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
         private string duracion;
 
-
-
-
         public Llamada(string descOperador, string detalle, string duracion, bool encuestaEnv, string observacion, Cliente cliente)
         {
             this.descripcionOperador = descOperador;
@@ -123,7 +120,7 @@ namespace PPAI_2023.Entidades
             }
         }
 
-
+       
 
     } 
             

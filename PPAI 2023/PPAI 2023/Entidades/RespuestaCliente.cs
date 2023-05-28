@@ -20,6 +20,11 @@ namespace PPAI_2023.Entidades
             this.respuestaSeleccionada = respuestaSeleccionada;
 
         }
+        public RespuestaCliente()
+        {
+
+        }
+
 
         //Propiedades get y set
         public DateTime FechaEncuestra
