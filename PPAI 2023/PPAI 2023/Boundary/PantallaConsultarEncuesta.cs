@@ -93,6 +93,12 @@ namespace PPAI_2023
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             gestor.tomarDatosPeriodoLlamada(tomarFechaInicio(), tomarFechaFin());
+            lblDescripcionEncuesta.Visible = true;
+            lblDni.Visible = true;
+            lblDuracion.Visible = true;
+            lblEstado.Visible = true;
+            lblnombre.Visible = true;
+            lblNroCelular.Visible = true;
         }
 
         private void tomarLlamadaSeleccionada(object sender, DataGridViewCellEventArgs e)

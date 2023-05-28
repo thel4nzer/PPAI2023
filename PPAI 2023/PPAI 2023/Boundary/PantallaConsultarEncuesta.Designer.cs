@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDescripcionRespuestas = new System.Windows.Forms.DataGridView();
             this.btnCsv = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -62,9 +63,11 @@
             // 
             // grdDescripcionRespuestas
             // 
+            this.grdDescripcionRespuestas.BackgroundColor = System.Drawing.Color.White;
             this.grdDescripcionRespuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDescripcionRespuestas.Location = new System.Drawing.Point(959, 445);
             this.grdDescripcionRespuestas.Name = "grdDescripcionRespuestas";
+            this.grdDescripcionRespuestas.RowHeadersVisible = false;
             this.grdDescripcionRespuestas.RowHeadersWidth = 51;
             this.grdDescripcionRespuestas.RowTemplate.Height = 24;
             this.grdDescripcionRespuestas.Size = new System.Drawing.Size(315, 136);
@@ -103,6 +106,7 @@
             this.lblDuracion.Size = new System.Drawing.Size(64, 25);
             this.lblDuracion.TabIndex = 53;
             this.lblDuracion.Text = "label2";
+            this.lblDuracion.Visible = false;
             // 
             // label8
             // 
@@ -125,6 +129,7 @@
             this.lblEstado.Size = new System.Drawing.Size(64, 25);
             this.lblEstado.TabIndex = 51;
             this.lblEstado.Text = "label2";
+            this.lblEstado.Visible = false;
             // 
             // label9
             // 
@@ -169,6 +174,7 @@
             this.lblNroCelular.Size = new System.Drawing.Size(64, 25);
             this.lblNroCelular.TabIndex = 47;
             this.lblNroCelular.Text = "label2";
+            this.lblNroCelular.Visible = false;
             // 
             // lblDni
             // 
@@ -180,6 +186,7 @@
             this.lblDni.Size = new System.Drawing.Size(64, 25);
             this.lblDni.TabIndex = 46;
             this.lblDni.Text = "label2";
+            this.lblDni.Visible = false;
             // 
             // lblnombre
             // 
@@ -191,6 +198,7 @@
             this.lblnombre.Size = new System.Drawing.Size(64, 25);
             this.lblnombre.TabIndex = 43;
             this.lblnombre.Text = "label2";
+            this.lblnombre.Visible = false;
             // 
             // label7
             // 
@@ -239,9 +247,20 @@
             // 
             // grdLlamadas
             // 
+            this.grdLlamadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdLlamadas.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdLlamadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdLlamadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdLlamadas.Location = new System.Drawing.Point(40, 215);
             this.grdLlamadas.Name = "grdLlamadas";
+            this.grdLlamadas.RowHeadersVisible = false;
             this.grdLlamadas.RowHeadersWidth = 51;
             this.grdLlamadas.RowTemplate.Height = 24;
             this.grdLlamadas.Size = new System.Drawing.Size(442, 186);
@@ -321,12 +340,15 @@
             this.lblDescripcionEncuesta.Size = new System.Drawing.Size(69, 25);
             this.lblDescripcionEncuesta.TabIndex = 59;
             this.lblDescripcionEncuesta.Text = "sweee";
+            this.lblDescripcionEncuesta.Visible = false;
             // 
             // grdRespuestasPosibles
             // 
+            this.grdRespuestasPosibles.BackgroundColor = System.Drawing.Color.White;
             this.grdRespuestasPosibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdRespuestasPosibles.Location = new System.Drawing.Point(626, 445);
             this.grdRespuestasPosibles.Name = "grdRespuestasPosibles";
+            this.grdRespuestasPosibles.RowHeadersVisible = false;
             this.grdRespuestasPosibles.RowHeadersWidth = 51;
             this.grdRespuestasPosibles.RowTemplate.Height = 24;
             this.grdRespuestasPosibles.Size = new System.Drawing.Size(315, 136);
