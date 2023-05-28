@@ -19,6 +19,10 @@ namespace PPAI_2023.Entidades
             this.descripcion = descripcion;
             this.fechaFinVigencia = fechaFinVigencia;
         }
+        public Encuesta()
+        {
+
+        }
 
         // Propiedades get y set
         public string Descripcion
@@ -34,19 +38,24 @@ namespace PPAI_2023.Entidades
         }
         public List<Pregunta> Pregunta { get => pregunta; set => pregunta = value; }
 
-        public Encuesta()
-        {
-
-        }
-
         public void obtenerDatosEncuesta(Encuesta enc)
         {
-            List<string> resp = new List<string>();
+            List<Pregunta> pregEncuestas = new List<Pregunta>();
+            RespuestaPosible resp = new RespuestaPosible();
             foreach (Pregunta preg in enc.pregunta)
             {
-                //if(pregunta.esRespuesta());
-                // Realiza las operaciones necesarias con cada respuesta
+                if (preg.esRespuesta(resp))
+                {
+                    preg.getDescripcion();
+                    pregEncuestas.Add(preg);    
+                }  
             }
+            getDescripcionEncuesta();
+        }
+
+        public string getDescripcionEncuesta()
+        {
+            return descripcion;
         }
     }
 }

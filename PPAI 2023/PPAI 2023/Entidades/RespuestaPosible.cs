@@ -18,6 +18,10 @@ namespace PPAI_2023.Entidades
             this.valor = valor;
             this.descripcion = descripcionRespuestaP;
         }
+        public RespuestaPosible()
+        {
+
+        }
 
         //Propiedades get y set
         public int Valor

@@ -10,8 +10,9 @@ namespace PPAI_2023.Entidades
     public class Pregunta
     {
         private string pregunta;
-        private RespuestaPosible respuestaPosible;
-        public Pregunta(string descripcionPregunta, RespuestaPosible respuestaPosible)
+        private List<RespuestaPosible> respuestaPosible;
+        
+        public Pregunta(string descripcionPregunta, List<RespuestaPosible> respuestaPosible)
         {
             this.pregunta = descripcionPregunta;
             this.respuestaPosible = respuestaPosible;
@@ -24,16 +25,18 @@ namespace PPAI_2023.Entidades
             set { pregunta = value; }
         }
 
-        public bool esRespuesta(RespuestaPosible rta)
+        public bool esRespuesta(RespuestaPosible resp)
         {
-            if (respuestaPosible == rta)
+            foreach (RespuestaPosible resPos in respuestaPosible)
             {
+                if(resPos == resp)
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
+        }
+        public string getDescripcion()
+        {
+            return pregunta;
         }
     }
 }
