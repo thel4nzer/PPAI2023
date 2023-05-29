@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Reflection;
@@ -13,6 +14,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PPAI_2023
@@ -93,12 +95,7 @@ namespace PPAI_2023
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             gestor.tomarDatosPeriodoLlamada(tomarFechaInicio(), tomarFechaFin());
-            lblDescripcionEncuesta.Visible = true;
-            lblDni.Visible = true;
-            lblDuracion.Visible = true;
-            lblEstado.Visible = true;
-            lblnombre.Visible = true;
-            lblNroCelular.Visible = true;
+            
         }
 
         private void tomarLlamadaSeleccionada(object sender, DataGridViewCellEventArgs e)
@@ -108,6 +105,12 @@ namespace PPAI_2023
                 DataGridViewRow filaSelccionada = grdLlamadas.Rows[e.RowIndex];
                 Llamada llamadaSeleccionada = filaSelccionada.DataBoundItem as Llamada;
                 gestor.tomarLlamada(llamadaSeleccionada);
+                lblDescripcionEncuesta.Visible = true;
+                lblDni.Visible = true;
+                lblDuracion.Visible = true;
+                lblEstado.Visible = true;
+                lblnombre.Visible = true;
+                lblNroCelular.Visible = true;
             }
 
         }
@@ -152,6 +155,21 @@ namespace PPAI_2023
             }
             btnFiltrar.Enabled = false;
             grdLlamadas.Enabled = false;
+        }
+
+        private void tomarOpcionCsv_Click(object sender, EventArgs e)
+        {
+            gestor.opcionIngresada(lblnombre.Text, lblEstado.Text, lblDuracion.Text, grdRespuestasPosibles, grdDescripcionRespuestas);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tomarOpcionImprimir_Click(object sender, EventArgs e)
+        {
+            gestor.opcionImprimir(lblnombre.Text, lblEstado.Text, lblDuracion.Text, grdRespuestasPosibles, grdDescripcionRespuestas);
         }
     }
 }

@@ -77,14 +77,17 @@ namespace PPAI_2023
 
             //Preguntas
             Pregunta preg1 = new Pregunta("Me da los datos de su tarjeta??");
+            Pregunta preg2 = new Pregunta("Su banco lo esta financiando bien?");
 
-            preguntas = new List<Pregunta>() { preg1 };
+            preguntas = new List<Pregunta>() { preg1, preg2};
 
             //Encuestas
             Encuesta encuesta1 = new Encuesta("Le gusto o no???", new DateTime(2022, 06, 16, 14, 00, 0));
             encuesta1.agregarPregunta(preg1);
+            Encuesta encuesta2 = new Encuesta("MultipleOPC", new DateTime(2022, 06, 16, 14, 00, 0));
+            encuesta2.agregarPregunta(preg2);
 
-            encuestas = new List<Encuesta>() { encuesta1 };
+            encuestas = new List<Encuesta>() { encuesta1, encuesta2 };
 
  
 

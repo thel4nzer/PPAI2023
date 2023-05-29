@@ -30,8 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDescripcionRespuestas = new System.Windows.Forms.DataGridView();
-            this.btnCsv = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
+            this.tomarOpcionCsv = new System.Windows.Forms.Button();
+            this.tomarOpcionImprimir = new System.Windows.Forms.Button();
             this.lblDuracion = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.grdRespuestasPosibles = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.grdDescripcionRespuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLlamadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdRespuestasPosibles)).BeginInit();
@@ -67,34 +68,44 @@
             this.grdDescripcionRespuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDescripcionRespuestas.Location = new System.Drawing.Point(959, 445);
             this.grdDescripcionRespuestas.Name = "grdDescripcionRespuestas";
+            this.grdDescripcionRespuestas.ReadOnly = true;
             this.grdDescripcionRespuestas.RowHeadersVisible = false;
             this.grdDescripcionRespuestas.RowHeadersWidth = 51;
             this.grdDescripcionRespuestas.RowTemplate.Height = 24;
             this.grdDescripcionRespuestas.Size = new System.Drawing.Size(315, 136);
             this.grdDescripcionRespuestas.TabIndex = 57;
             // 
-            // btnCsv
+            // tomarOpcionCsv
             // 
-            this.btnCsv.BackColor = System.Drawing.Color.Yellow;
-            this.btnCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCsv.ForeColor = System.Drawing.Color.Black;
-            this.btnCsv.Location = new System.Drawing.Point(1026, 598);
-            this.btnCsv.Name = "btnCsv";
-            this.btnCsv.Size = new System.Drawing.Size(248, 54);
-            this.btnCsv.TabIndex = 56;
-            this.btnCsv.Text = "Generar Csv";
-            this.btnCsv.UseVisualStyleBackColor = false;
+            this.tomarOpcionCsv.BackColor = System.Drawing.Color.Black;
+            this.tomarOpcionCsv.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
+            this.tomarOpcionCsv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Olive;
+            this.tomarOpcionCsv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tomarOpcionCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tomarOpcionCsv.ForeColor = System.Drawing.Color.White;
+            this.tomarOpcionCsv.Location = new System.Drawing.Point(1026, 598);
+            this.tomarOpcionCsv.Name = "tomarOpcionCsv";
+            this.tomarOpcionCsv.Size = new System.Drawing.Size(248, 54);
+            this.tomarOpcionCsv.TabIndex = 56;
+            this.tomarOpcionCsv.Text = "Generar Csv";
+            this.tomarOpcionCsv.UseVisualStyleBackColor = false;
+            this.tomarOpcionCsv.Click += new System.EventHandler(this.tomarOpcionCsv_Click);
             // 
-            // btnImprimir
+            // tomarOpcionImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.Lime;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(840, 598);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(148, 54);
-            this.btnImprimir.TabIndex = 55;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.tomarOpcionImprimir.BackColor = System.Drawing.Color.Black;
+            this.tomarOpcionImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.tomarOpcionImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.tomarOpcionImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tomarOpcionImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tomarOpcionImprimir.ForeColor = System.Drawing.Color.White;
+            this.tomarOpcionImprimir.Location = new System.Drawing.Point(840, 598);
+            this.tomarOpcionImprimir.Name = "tomarOpcionImprimir";
+            this.tomarOpcionImprimir.Size = new System.Drawing.Size(148, 54);
+            this.tomarOpcionImprimir.TabIndex = 55;
+            this.tomarOpcionImprimir.Text = "Imprimir";
+            this.tomarOpcionImprimir.UseVisualStyleBackColor = false;
+            this.tomarOpcionImprimir.Click += new System.EventHandler(this.tomarOpcionImprimir_Click);
             // 
             // lblDuracion
             // 
@@ -213,7 +224,11 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(30, 598);
@@ -222,6 +237,7 @@
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label4
             // 
@@ -230,7 +246,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(473, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(426, 39);
+            this.label4.Size = new System.Drawing.Size(410, 38);
             this.label4.TabIndex = 40;
             this.label4.Text = "CONSULTAR ENCUESTA";
             // 
@@ -309,8 +325,12 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.BackColor = System.Drawing.Color.Lime;
+            this.btnFiltrar.BackColor = System.Drawing.Color.Black;
+            this.btnFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnFiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar.Location = new System.Drawing.Point(480, 125);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(111, 45);
@@ -348,6 +368,7 @@
             this.grdRespuestasPosibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdRespuestasPosibles.Location = new System.Drawing.Point(626, 445);
             this.grdRespuestasPosibles.Name = "grdRespuestasPosibles";
+            this.grdRespuestasPosibles.ReadOnly = true;
             this.grdRespuestasPosibles.RowHeadersVisible = false;
             this.grdRespuestasPosibles.RowHeadersWidth = 51;
             this.grdRespuestasPosibles.RowTemplate.Height = 24;
@@ -376,6 +397,14 @@
             this.label12.TabIndex = 63;
             this.label12.Text = "Datos de la llamada:";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(613, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(667, 512);
+            this.panel1.TabIndex = 64;
+            // 
             // PantallaConsultarEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -389,8 +418,8 @@
             this.Controls.Add(this.lblDescripcionEncuesta);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.grdDescripcionRespuestas);
-            this.Controls.Add(this.btnCsv);
-            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.tomarOpcionCsv);
+            this.Controls.Add(this.tomarOpcionImprimir);
             this.Controls.Add(this.lblDuracion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblEstado);
@@ -409,6 +438,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.maskedFechaFin);
             this.Controls.Add(this.maskedFechaInicio);
+            this.Controls.Add(this.panel1);
             this.Name = "PantallaConsultarEncuesta";
             this.Text = "PantallaConsultarEncuesta";
             this.Load += new System.EventHandler(this.PantallaConsultarEncuesta_Load);
@@ -423,8 +453,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grdDescripcionRespuestas;
-        private System.Windows.Forms.Button btnCsv;
-        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button tomarOpcionCsv;
+        private System.Windows.Forms.Button tomarOpcionImprimir;
         private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblEstado;
@@ -449,5 +479,6 @@
         private System.Windows.Forms.DataGridView grdRespuestasPosibles;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
     }
 }
