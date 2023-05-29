@@ -23,5 +23,10 @@ namespace PPAI_2023
             ventana.Show();
             this.Hide();
         }
+
+        private void Encuestas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

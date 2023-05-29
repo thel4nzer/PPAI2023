@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDescripcionRespuestas = new System.Windows.Forms.DataGridView();
             this.tomarOpcionCsv = new System.Windows.Forms.Button();
             this.tomarOpcionImprimir = new System.Windows.Forms.Button();
@@ -57,6 +57,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DescripcionOperadorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DuracionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ObservacionAuditorColum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pregunta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionRespuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDescripcionRespuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdLlamadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdRespuestasPosibles)).BeginInit();
@@ -64,8 +69,12 @@
             // 
             // grdDescripcionRespuestas
             // 
+            this.grdDescripcionRespuestas.AllowUserToAddRows = false;
+            this.grdDescripcionRespuestas.AllowUserToDeleteRows = false;
             this.grdDescripcionRespuestas.BackgroundColor = System.Drawing.Color.White;
             this.grdDescripcionRespuestas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDescripcionRespuestas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DescripcionRespuesta});
             this.grdDescripcionRespuestas.Location = new System.Drawing.Point(959, 445);
             this.grdDescripcionRespuestas.Name = "grdDescripcionRespuestas";
             this.grdDescripcionRespuestas.ReadOnly = true;
@@ -77,7 +86,7 @@
             // 
             // tomarOpcionCsv
             // 
-            this.tomarOpcionCsv.BackColor = System.Drawing.Color.Black;
+            this.tomarOpcionCsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tomarOpcionCsv.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
             this.tomarOpcionCsv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Olive;
             this.tomarOpcionCsv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -93,7 +102,7 @@
             // 
             // tomarOpcionImprimir
             // 
-            this.tomarOpcionImprimir.BackColor = System.Drawing.Color.Black;
+            this.tomarOpcionImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tomarOpcionImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.tomarOpcionImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.tomarOpcionImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -224,7 +233,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
@@ -263,19 +272,26 @@
             // 
             // grdLlamadas
             // 
+            this.grdLlamadas.AllowUserToAddRows = false;
+            this.grdLlamadas.AllowUserToDeleteRows = false;
             this.grdLlamadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdLlamadas.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdLlamadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdLlamadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdLlamadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdLlamadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DescripcionOperadorColumn,
+            this.DuracionColumn,
+            this.ObservacionAuditorColum});
             this.grdLlamadas.Location = new System.Drawing.Point(40, 215);
             this.grdLlamadas.Name = "grdLlamadas";
+            this.grdLlamadas.ReadOnly = true;
             this.grdLlamadas.RowHeadersVisible = false;
             this.grdLlamadas.RowHeadersWidth = 51;
             this.grdLlamadas.RowTemplate.Height = 24;
@@ -325,7 +341,7 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.BackColor = System.Drawing.Color.Black;
+            this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.btnFiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -364,8 +380,12 @@
             // 
             // grdRespuestasPosibles
             // 
+            this.grdRespuestasPosibles.AllowUserToAddRows = false;
+            this.grdRespuestasPosibles.AllowUserToDeleteRows = false;
             this.grdRespuestasPosibles.BackgroundColor = System.Drawing.Color.White;
             this.grdRespuestasPosibles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdRespuestasPosibles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pregunta});
             this.grdRespuestasPosibles.Location = new System.Drawing.Point(626, 445);
             this.grdRespuestasPosibles.Name = "grdRespuestasPosibles";
             this.grdRespuestasPosibles.ReadOnly = true;
@@ -399,17 +419,55 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(613, 80);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(667, 512);
             this.panel1.TabIndex = 64;
             // 
+            // DescripcionOperadorColumn
+            // 
+            this.DescripcionOperadorColumn.HeaderText = "Descripcion Operador";
+            this.DescripcionOperadorColumn.MinimumWidth = 6;
+            this.DescripcionOperadorColumn.Name = "DescripcionOperadorColumn";
+            this.DescripcionOperadorColumn.ReadOnly = true;
+            // 
+            // DuracionColumn
+            // 
+            this.DuracionColumn.HeaderText = "Duracion";
+            this.DuracionColumn.MinimumWidth = 6;
+            this.DuracionColumn.Name = "DuracionColumn";
+            this.DuracionColumn.ReadOnly = true;
+            // 
+            // ObservacionAuditorColum
+            // 
+            this.ObservacionAuditorColum.HeaderText = "Observacion Auditor";
+            this.ObservacionAuditorColum.MinimumWidth = 6;
+            this.ObservacionAuditorColum.Name = "ObservacionAuditorColum";
+            this.ObservacionAuditorColum.ReadOnly = true;
+            // 
+            // Pregunta
+            // 
+            this.Pregunta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Pregunta.HeaderText = "Pregunta";
+            this.Pregunta.MinimumWidth = 6;
+            this.Pregunta.Name = "Pregunta";
+            this.Pregunta.ReadOnly = true;
+            // 
+            // DescripcionRespuesta
+            // 
+            this.DescripcionRespuesta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescripcionRespuesta.HeaderText = "Descripcion";
+            this.DescripcionRespuesta.MinimumWidth = 6;
+            this.DescripcionRespuesta.Name = "DescripcionRespuesta";
+            this.DescripcionRespuesta.ReadOnly = true;
+            // 
             // PantallaConsultarEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1292, 664);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -480,5 +538,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionRespuesta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionOperadorColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DuracionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObservacionAuditorColum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pregunta;
     }
 }

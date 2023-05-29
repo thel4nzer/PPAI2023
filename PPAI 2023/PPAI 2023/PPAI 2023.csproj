@@ -62,18 +62,6 @@
     <Compile Include="Entidades\RespuestaCliente.cs" />
     <Compile Include="Entidades\RespuestaPosible.cs" />
     <Compile Include="Datos\GeneradorDeDatos.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Boundary\PantallaConsultarEncuesta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,12 +72,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Encuestas.resx">
       <DependentUpon>Encuestas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\PantallaConsultarEncuesta.resx">
       <DependentUpon>PantallaConsultarEncuesta.cs</DependentUpon>

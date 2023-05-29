@@ -35,18 +35,28 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(320, 82);
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(246, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 23);
+            this.button1.Size = new System.Drawing.Size(323, 57);
             this.button1.TabIndex = 0;
             this.button1.Text = "Registrar Encuesta";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnConsultarEncuesta
             // 
-            this.btnConsultarEncuesta.Location = new System.Drawing.Point(320, 214);
+            this.btnConsultarEncuesta.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
+            this.btnConsultarEncuesta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
+            this.btnConsultarEncuesta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEncuesta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEncuesta.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarEncuesta.Location = new System.Drawing.Point(246, 217);
             this.btnConsultarEncuesta.Name = "btnConsultarEncuesta";
-            this.btnConsultarEncuesta.Size = new System.Drawing.Size(187, 23);
+            this.btnConsultarEncuesta.Size = new System.Drawing.Size(323, 59);
             this.btnConsultarEncuesta.TabIndex = 1;
             this.btnConsultarEncuesta.Text = "Consultar Encuesta";
             this.btnConsultarEncuesta.UseVisualStyleBackColor = true;
@@ -56,11 +66,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnConsultarEncuesta);
             this.Controls.Add(this.button1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "Encuestas";
             this.Text = "Encuestas";
+            this.Load += new System.EventHandler(this.Encuestas_Load);
             this.ResumeLayout(false);
 
         }

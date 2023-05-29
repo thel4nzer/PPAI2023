@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PPAI 2023",
+    "\\PPAI 2023\\PPAI 2023",
+    "\\PPAI 2023\\PPAI 2023\\Datos"
   ],
+  "SelectedNode": "\\PPAI 2023\\PPAI 2023\\Datos\\GeneradorDeDatos.cs",
   "PreviewInSolutionExplorer": false
 }

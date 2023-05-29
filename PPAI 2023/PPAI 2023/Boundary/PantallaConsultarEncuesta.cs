@@ -14,7 +14,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Printing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PPAI_2023
@@ -62,10 +61,9 @@ namespace PPAI_2023
 
         public void solicitarSeleccionLlamada(List<Llamada> datosLlamada)
         {
+            grdLlamadas.Rows.Clear();
             grdLlamadas.Enabled = true;
-            grdLlamadas.Columns.Add("DescripcionOperadorColumn", "Descripcion Operador");
-            grdLlamadas.Columns.Add("DuracionColumn", "Duracion");
-            grdLlamadas.Columns.Add("ObservacionAuditorColum", "Observacion Auditor");
+
             foreach (var llamada in datosLlamada)
             {
                 grdLlamadas.AutoGenerateColumns = false;
@@ -94,8 +92,15 @@ namespace PPAI_2023
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            gestor.tomarDatosPeriodoLlamada(tomarFechaInicio(), tomarFechaFin());
-            
+            try
+            {
+                gestor.tomarDatosPeriodoLlamada(tomarFechaInicio(), tomarFechaFin());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe ingresar un rango de fechas valido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void tomarLlamadaSeleccionada(object sender, DataGridViewCellEventArgs e)
@@ -117,11 +122,14 @@ namespace PPAI_2023
 
         public void mostrarDatosLlamada(string estado, Llamada llamSelec, Encuesta en)
         {
+            grdDescripcionRespuestas.Rows.Clear();
+            grdDescripcionRespuestas.Columns.Clear();
+
             lblnombre.Text = llamSelec.Cliente.Nombre.ToString();
             lblDni.Text = llamSelec.Cliente.Dni.ToString();
             lblNroCelular.Text = llamSelec.Cliente.NroCelular.ToString();
             lblDuracion.Text = llamSelec.Duracion.ToString();
-            lblEstado.Text  = estado.ToString();
+            lblEstado.Text = estado.ToString();
             lblDescripcionEncuesta.Text = en.Descripcion.ToString();
             DataGridViewTextBoxColumn descripcionColumn = new DataGridViewTextBoxColumn();
             descripcionColumn.DataPropertyName = "DescripcionRespuesta";
@@ -139,6 +147,9 @@ namespace PPAI_2023
                 grdDescripcionRespuestas.Rows.Add(fila);
             }
 
+            grdRespuestasPosibles.Rows.Clear();
+            grdRespuestasPosibles.Columns.Clear();
+
             DataGridViewTextBoxColumn preguntaColumn = new DataGridViewTextBoxColumn();
             preguntaColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             preguntaColumn.DataPropertyName = "Pregunta";
@@ -154,7 +165,6 @@ namespace PPAI_2023
                 grdRespuestasPosibles.Rows.Add(fila);
             }
             btnFiltrar.Enabled = false;
-            grdLlamadas.Enabled = false;
         }
 
         private void tomarOpcionCsv_Click(object sender, EventArgs e)
