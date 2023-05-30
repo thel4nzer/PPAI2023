@@ -26,7 +26,7 @@ namespace PPAI_2023.Entidades
         }
 
 
-        //Propiedades get y set
+        //Getters & Setters
         public DateTime FechaEncuestra
         {
             get { return fechaEncuesta; }

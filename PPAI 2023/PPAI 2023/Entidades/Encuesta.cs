@@ -24,7 +24,7 @@ namespace PPAI_2023.Entidades
 
         }
 
-        // Propiedades get y set
+        //Getters & Setters
         public string Descripcion
         {
             get { return descripcion; }

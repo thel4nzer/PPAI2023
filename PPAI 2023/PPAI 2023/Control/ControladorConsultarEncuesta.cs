@@ -58,7 +58,6 @@ namespace PPAI_2023.Control
         {
             obtenerDatosLlamada(llamselec);
             obtenerDatosEncuesta();
-            //pantalla.mostrarDatosLlamada();
         }
 
         public void obtenerDatosLlamada(Llamada llamselec)
@@ -66,6 +65,7 @@ namespace PPAI_2023.Control
             llamada.obtenerDatosLlamada(llamselec);
         }
 
+        
         public void obtenerDatosEncuesta()
         {
             List<Encuesta> encuestas = generadorDatos.getEncuestas();

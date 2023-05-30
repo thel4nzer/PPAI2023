@@ -23,8 +23,8 @@ namespace PPAI_2023.Entidades
 
         }
 
-        //Propiedades get y set
-        public int Valor
+        //Getters & Setters 
+        public int Valor 
         {
             get { return valor; }
             set { valor = value; }
