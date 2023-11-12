@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using static System.Net.WebRequestMethods;
+using PPAI_2023.Iterador;
+using PPAI_2023.Iterador;
 
 namespace PPAI_2023.Control
 {
@@ -44,19 +46,44 @@ namespace PPAI_2023.Control
 
         public void buscarLlamadas(DateTime fechaIni, DateTime fechaFin)
         {
-            List<Llamada> llam = generadorDatos.getLlamadas();
-            datosLlamada = new List<Llamada>();
-            for (int i = 0; i < llam.Count(); i++)
+            List<Llamada> llamadas = generadorDatos.getLlamadas();
+            List<Llamada>datosLlamada = new List<Llamada>();
+            List<Func<Llamada, bool>> listaDeFiltros = new List<Func<Llamada, bool>>
             {
-                if (llam[i].esDePeriodo(fechaIni, fechaFin))
+                llamada => llamada.esDePeriodo(fechaIni, fechaFin),
+                llamada => llamada.tieneRespuesta()
+            };
+            IIterador <Llamada> iterador = crearIterador(llamadas, listaDeFiltros);
+            iterador.primero();
+            while (!iterador.haTerminado()) 
+            {
+                Llamada llamadaActual = iterador.actual();
+                if (iterador.cumpleFiltro(llamada => llamada.esDePeriodo(fechaIni, fechaFin) && llamada.tieneRespuesta()))
                 {
-                    if (llam[i].tieneRespuesta())
-                    {
-                        datosLlamada.Add(llam[i]);
-                    }
+
+                    //SOLO DEBO IR A TIENE RESPUESTA Y DENTRO DEL METODO HAACER UN CREAR ITERADOR, NADA MAS
+                    datosLlamada.Add(llamadaActual);
                 }
+                iterador.siguiente();
+
             }
+            //for (int i = 0; i < llam.Count(); i++)
+            //{
+                //if (llam[i].esDePeriodo(fechaIni, fechaFin))
+                //{
+                    //if (llam[i].tieneRespuesta())
+                    //{
+                        //datosLlamada.Add(llam[i]);
+                    //}
+                //}
+            //}
             pantalla.solicitarSeleccionLlamada(datosLlamada);
+        }
+
+        public IIterador<Llamada> crearIterador(List<Llamada> llamadas, List<Func<Llamada, bool>> filtros)
+        {
+            return new IteradorLlamadas(llamadas, filtros);
+         
         }
 
         public void tomarLlamada(Llamada llamselec)
@@ -70,6 +97,8 @@ namespace PPAI_2023.Control
         {
             return llamada.obtenerDatosLlamada(llamselec);
         }
+
+        //Modificar, no se puede tener el constructor y enviar el parametro a la vez
 
         public Encuesta obtenerDatosEncuesta()
         {

@@ -68,6 +68,10 @@
     <Compile Include="Boundary\PantallaConsultarEncuesta.Designer.cs">
       <DependentUpon>PantallaConsultarEncuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Iterador\IIterador.cs" />
+    <Compile Include="Iterador\IIteradorSinFiltro.cs" />
+    <Compile Include="Iterador\IteradorLlamadas.cs" />
+    <Compile Include="Iterador\IteradorRespuestas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Encuestas.resx">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PPAI_2023.Iterador;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Linq;
@@ -76,14 +77,40 @@ namespace PPAI_2023.Entidades
 
         public bool tieneRespuesta()
         {
-            for (int i = 0; i < respuestaCliente.Count(); i++)
+            IIteradorSinFiltro<RespuestaCliente> iterador = crearIterador();
+            iterador.primero();
+
+            while (!iterador.haTerminado())
             {
-                if (respuestaCliente[i].getRespuesta() != "")
+                RespuestaCliente respuestaActual = iterador.actual();
+
+                if (!string.IsNullOrEmpty(respuestaActual.getRespuesta()))
                 {
+                    // La colección contiene al menos una respuesta no vacía
                     return true;
                 }
+
+                iterador.siguiente();
             }
+
+            // Si ninguna respuesta es distinta de vacío
             return false;
+
+            //COMO LO RESOLVIAMOS EN LA ENTREGA ANTERIOR
+            //for (int i = 0; i < respuestaCliente.Count(); i++)
+            //{
+                //if (respuestaCliente[i].getRespuesta() != "")
+                //{
+                    //return true;
+                //}
+            //}
+            //return false;
+        }
+
+        public IIteradorSinFiltro<RespuestaCliente> crearIterador()
+        {
+            return new IteradorRespuestas(respuestaCliente);
+
         }
 
         //Otros metodos para datos (despues los vemos)

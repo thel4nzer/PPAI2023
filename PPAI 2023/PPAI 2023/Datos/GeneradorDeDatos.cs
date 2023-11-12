@@ -92,7 +92,7 @@ namespace PPAI_2023
  
 
             //Cambios de estado Llamada
-            Llamada llamada1 = new Llamada("Se hizo el vivo", "Respondio","5 min",true,"Me puteo",cliente1);
+            Llamada llamada1 = new Llamada("Se hizo el vivo", "Respondio","5 min",true,"Me insulto",cliente1);
             llamada1.agregarCambioDeEstado(cambioEstado1);
             llamada1.agregarCambioDeEstado(cambioEstado2);
             llamada1.agregarCambioDeEstado(cambioEstado3);
@@ -103,7 +103,6 @@ namespace PPAI_2023
 
             Llamada llamada3 = new Llamada("Accedio a contestar", "Respondio", "15 minutos", true, "Lo convencimos", cliente3);
             llamada3.agregarCambioDeEstado(cambioEstado1);
-            llamada3.agregarCambioDeEstado(cambioEstado3);
             llamada3.agregarRespuestaCliente(resp3);
             llamadas = new List<Llamada>() { llamada1, llamada2, llamada3};
 

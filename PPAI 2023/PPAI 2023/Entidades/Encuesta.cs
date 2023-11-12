@@ -54,6 +54,8 @@ namespace PPAI_2023.Entidades
             return enc;
         }
 
+        //Modificar, no enviar parametros a la clase encuesta
+
 
         public void agregarPregunta(Pregunta pre)
         {

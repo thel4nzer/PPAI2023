@@ -3,8 +3,10 @@
     "",
     "\\PPAI 2023",
     "\\PPAI 2023\\PPAI 2023",
+    "\\PPAI 2023\\PPAI 2023\\Boundary",
+    "\\PPAI 2023\\PPAI 2023\\Control",
     "\\PPAI 2023\\PPAI 2023\\Datos"
   ],
-  "SelectedNode": "\\PPAI 2023\\PPAI 2023\\Datos\\GeneradorDeDatos.cs",
+  "SelectedNode": "\\PPAI 2023\\PPAI 2023\\Control\\ControladorConsultarEncuesta.cs",
   "PreviewInSolutionExplorer": false
 }

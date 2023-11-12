@@ -24,3 +24,27 @@ C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.c
 C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.exe
 C:\Users\Usuario\Source\Repos\PPAI2023\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.pdb
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Encuestas.resources
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.PantallaConsultarEncuesta.resources
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Properties.Resources.resources
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.exe
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.pdb
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe.config
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe
+C:\Users\Usuario\source\repos\PPAI2023PATRONES\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.pdb
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe.config
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.exe
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\bin\Debug\PPAI 2023.pdb
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Encuestas.resources
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.PantallaConsultarEncuesta.resources
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI_2023.Properties.Resources.resources
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.exe
+C:\Users\Usuario\source\repos\PPAI2023ITERATOR\PPAI 2023\PPAI 2023\obj\Debug\PPAI 2023.pdb
