@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ControladorConsultarEncuesta.cs" />
+    <Compile Include="Datos\BDHelper.cs" />
     <Compile Include="Encuestas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,8 @@
     <Compile Include="Boundary\PantallaConsultarEncuesta.Designer.cs">
       <DependentUpon>PantallaConsultarEncuesta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Iterador\IAgregado.cs" />
+    <Compile Include="Iterador\IAgregadoSinFiltro.cs" />
     <Compile Include="Iterador\IIterador.cs" />
     <Compile Include="Iterador\IIteradorSinFiltro.cs" />
     <Compile Include="Iterador\IteradorLlamadas.cs" />

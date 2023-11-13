@@ -10,12 +10,19 @@ namespace PPAI_2023.Entidades
     public class Pregunta
     {
         private string pregunta;
-        private List<RespuestaPosible> respuestaPosible;
+        private List<RespuestaPosible> respuestaPosible  = new List<RespuestaPosible>();
+        private int idPregunta;
         
-        public Pregunta(string descripcionPregunta)
+        public Pregunta(string descripcionPregunta,int id)
         {
             this.pregunta = descripcionPregunta;
             this.respuestaPosible = new List<RespuestaPosible>();
+            this.idPregunta = id;
+        }
+
+        public Pregunta()
+        {
+
         }
 
         // Propiedades get y set
@@ -23,6 +30,12 @@ namespace PPAI_2023.Entidades
         {
             get { return pregunta; }
             set { pregunta = value; }
+        }
+
+        public int Id
+        {
+            get { return idPregunta; }
+            set { idPregunta = value; }
         }
 
         public bool esRespuesta(RespuestaPosible resp)
@@ -37,6 +50,11 @@ namespace PPAI_2023.Entidades
         public string getDescripcion()
         {
             return pregunta;
+        }
+
+        public void agregarRespuestaPosible(RespuestaPosible re)
+        {
+            respuestaPosible.Add(re);
         }
     }
 }

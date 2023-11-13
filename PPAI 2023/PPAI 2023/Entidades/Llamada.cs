@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace PPAI_2023.Entidades
 {
-    public class Llamada
+    public class Llamada : IAgregadoSinFiltro<RespuestaCliente>
     {
+        private int idLlamada;
         private string descripcionOperador;
         private string detalleAccionRequerida;
         private bool encuestaEnviada;
@@ -21,8 +22,9 @@ namespace PPAI_2023.Entidades
         private List<RespuestaCliente> respuestaCliente = new List<RespuestaCliente>();
         private string duracion;
 
-        public Llamada(string descOperador, string detalle, string duracion, bool encuestaEnv, string observacion, Cliente cliente)
+        public Llamada(int idLlam, string descOperador, string detalle, string duracion, bool encuestaEnv, string observacion, Cliente cliente)
         {
+            this.idLlamada = idLlam;
             this.descripcionOperador = descOperador;
             this.detalleAccionRequerida = detalle;
             this.duracion = duracion;
@@ -36,6 +38,8 @@ namespace PPAI_2023.Entidades
 
         }
         
+        public int Id { get => idLlamada; set => idLlamada = value; }
+
         public string DescOperador { get => descripcionOperador; set => descripcionOperador = value; }
         public string Duracion { get => duracion; set => duracion = value; }
         public string Detalle { get => detalleAccionRequerida;set => detalleAccionRequerida = value; }
@@ -46,6 +50,7 @@ namespace PPAI_2023.Entidades
 
         public Cliente Cliente { get => cliente; set => cliente = value; }
         public List<RespuestaCliente> RespuestaCliente { get => respuestaCliente; set => respuestaCliente = value; }
+        public List<CambioEstado> CambioEstado { get => cambioEstado; set => cambioEstado = value; }
 
         public Llamada(string descripcionOperador, string detalleAccionRequerida, bool encuestaEnviada, string observacionAuditor, List<CambioEstado> cambioEstado, Cliente cliente, List<RespuestaCliente> respuestaCliente, string duracion, string descOperador)
         {
@@ -77,7 +82,7 @@ namespace PPAI_2023.Entidades
 
         public bool tieneRespuesta()
         {
-            IIteradorSinFiltro<RespuestaCliente> iterador = crearIterador();
+            IIteradorSinFiltro<RespuestaCliente> iterador = crearIterador(respuestaCliente);
             iterador.primero();
 
             while (!iterador.haTerminado())
@@ -107,7 +112,7 @@ namespace PPAI_2023.Entidades
             //return false;
         }
 
-        public IIteradorSinFiltro<RespuestaCliente> crearIterador()
+        public IIteradorSinFiltro<RespuestaCliente> crearIterador(List<RespuestaCliente>respuestaCliente)
         {
             return new IteradorRespuestas(respuestaCliente);
 
@@ -134,9 +139,9 @@ namespace PPAI_2023.Entidades
         {
             Cliente cliente = llamselec.Cliente;
             cliente.obtenerDatosCliente();
-            CambioEstado estadoActual = CambioEstado.ObtenerEstadoActual(llamselec.cambioEstado);
+            //CambioEstado estadoActual = CambioEstado.ObtenerEstadoActual(llamselec.CambioEstado);
 
-            //CambioEstado estadoActual = llamselec.cambioEstado.OrderByDescending(c => c.FechaHoraInicio).First();
+            CambioEstado estadoActual = llamselec.cambioEstado.OrderByDescending(c => c.FechaHoraInicio).First();
             string estado = estadoActual.getNombreEstado();
             string duracion = getDuracion(llamselec);
             List<string> resp = new List<string>();

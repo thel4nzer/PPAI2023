@@ -13,12 +13,15 @@ namespace PPAI_2023.Entidades
         private DateTime fechaHoraInicio;
         private Estado estado;
 
+
         // Constructor
         public CambioEstado(DateTime fechaHoraInicio, Estado est)
         {
             this.fechaHoraInicio = fechaHoraInicio;
             this.estado = est;
         }
+
+        public CambioEstado() { }
 
         // Propiedades get y set
         public DateTime FechaHoraInicio
@@ -27,9 +30,20 @@ namespace PPAI_2023.Entidades
             set { fechaHoraInicio = value; }
         }
 
+        public Estado Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
         public DateTime getFechaHoraInicio()
         {
             return fechaHoraInicio;
+        }
+
+        public Estado getEstado()
+        {
+            return estado;
         }
 
         public bool esEstadoInicial()

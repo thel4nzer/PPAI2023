@@ -8,16 +8,19 @@ namespace PPAI_2023.Entidades
 {
     public class Encuesta
     {
+
         // Atributos
         private string descripcion;
         private DateTime fechaFinVigencia;
         private List<Pregunta> pregunta = new List<Pregunta>();
+        private int idEncuesta;
 
         // Constructor
-        public Encuesta(string descripcion, DateTime fechaFinVigencia)
+        public Encuesta(string descripcion, DateTime fechaFinVigencia, int idEncu)
         {
             this.descripcion = descripcion;
             this.fechaFinVigencia = fechaFinVigencia;
+            this.idEncuesta = idEncu;
         }
         public Encuesta()
         {
@@ -29,6 +32,12 @@ namespace PPAI_2023.Entidades
         {
             get { return descripcion; }
             set { descripcion = value; }
+        }
+
+        public int IdEncuesta
+        {
+            get { return idEncuesta; }
+            set { idEncuesta = value; }
         }
 
         public DateTime FechaFinVigencia

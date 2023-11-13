@@ -16,7 +16,7 @@ using PPAI_2023.Iterador;
 
 namespace PPAI_2023.Control
 {
-    public class ControladorConsultarEncuesta
+    public class ControladorConsultarEncuesta : IAgregado<Llamada>
     {
         //Atributos
         private PantallaConsultarEncuesta pantalla;
@@ -46,7 +46,7 @@ namespace PPAI_2023.Control
 
         public void buscarLlamadas(DateTime fechaIni, DateTime fechaFin)
         {
-            List<Llamada> llamadas = generadorDatos.getLlamadas();
+            List<Llamada> llamadas = generadorDatos.getLlamada();
             List<Llamada>datosLlamada = new List<Llamada>();
             List<Func<Llamada, bool>> listaDeFiltros = new List<Func<Llamada, bool>>
             {
@@ -103,7 +103,7 @@ namespace PPAI_2023.Control
         public Encuesta obtenerDatosEncuesta()
         {
             Encuesta en = new Encuesta();
-            List<Encuesta> encuestas = generadorDatos.getEncuestas();
+            List<Encuesta> encuestas = generadorDatos.getEncuesta();
             foreach(Encuesta enc in encuestas)
             {
                 en = encuesta.obtenerDatosEncuesta(enc);

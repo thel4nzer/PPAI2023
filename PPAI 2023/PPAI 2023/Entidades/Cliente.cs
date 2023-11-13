@@ -14,11 +14,11 @@ namespace PPAI_2023.Entidades
 
         private int dni;
 
-        private int nroCelular;
+        private string nroCelular;
         private GeneradorDeDatos generadorDatos;
 
         //Constructor
-        public Cliente(int dni, string nombreCompleto, int nroCelular)
+        public Cliente(int dni, string nombreCompleto, string nroCelular)
         {
             this.nombreCompleto = nombreCompleto;
             this.dni = dni; 
@@ -36,7 +36,7 @@ namespace PPAI_2023.Entidades
             set { dni = value; } 
         }
 
-        public int NroCelular { 
+        public string NroCelular { 
             get { return nroCelular; } 
             set { nroCelular = value; } 
         }
